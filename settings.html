@@ -35,12 +35,7 @@
   <script src="js/test/tablesorter/jquery.tablesorter.widgets.min.js"></script>
   <script src="js/test/typeahead.js"></script> 
   <script src="js/test/userfrosting.js"></script>
-	
-	
-	
-	
 	<!-- start: Mobile Specific -->
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- end: Mobile Specific -->
 	
@@ -140,7 +135,7 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Admin ToDo
+								<i class="halflings-icon white user"></i> Dennis Ji
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -192,7 +187,7 @@
 							<li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a>
 							<ul>
-								<li><a class="submenu" href="settings.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Seiten Einstellungen</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Seiten Einstellungen</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
 							</ul>	
@@ -212,179 +207,99 @@
 			
 			<!-- start: Content -->
 			<div id="content" class="span10">
-			
-			
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
 					<a href="index.html">Dashboard</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Dashboard</a></li>
+				<li><a href="#">Seiten Einstellungen</a></li>
 			</ul>
 
-			<div class="row-fluid">
-				
-			
-				
-			</div>		
-
-			
-			<div class="row-fluid hideInIE8 circleStats">
-				
-				<div class="span2" onTablet="span4" onDesktop="span2">
-                	<div class="circleStatsItemBox yellow">
-						<div class="header">Festplatten Auslastung</div>
-						<span class="percent">Prozent</span>
-						<div class="circleStat">
-                    		<input type="text" value="58" class="whiteCircle" />
-						</div>		
-						<div class="footer">
-							<span class="count">
-								<span class="number">20000</span>
-								<span class="unit">MB</span>
-							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">50000</span>
-								<span class="unit">MB</span>
-							</span>	
+			<h1>Seiten Einstellungen</h1>
+			<!--
+<div class='row'>
+<div id='regbox' class='col-lg-6'>
+    <div class='panel panel-primary'>
+        <div class='panel-heading'>
+            <h3 class='panel-title'>Configuration</h3>
+        </div>
+        <div class='panel-body'>
+            <form class='form-horizontal' role='form' name='adminConfiguration' action='../api/update_site_settings.php' method='post'>
+                <div class="form-group">
+                    <label for="inputWebsiteName" class="col-sm-4 control-label">Site Name</label>
+                    <div class="col-sm-8">
+                        <input type='text' id="inputWebsiteName" class="form-control" name='website_name'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputWebsiteURL" class="col-sm-4 control-label">Admin Root URL</label>
+                    <div class="col-sm-8">
+                        <input type='text' id="inputWebsiteURL" class="form-control" name='website_url'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-sm-4 control-label">Account Management Email</label>
+                    <div class="col-sm-8">
+                        <input type='text' id="inputEmail" class="form-control" name='email'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="userRegistration" class="col-sm-4 control-label">User Registration</label>
+                    <div class="col-sm-8">
+                        <input type="checkbox" id ="userRegistration" name='can_register' value='1'/>
+                        <br><small>Specify whether users can create new accounts by themselves.</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="emailLogin" class="col-sm-4 control-label">Email Login</label>
+                    <div class="col-sm-8">
+                        <input type="checkbox" id ="checkEmailLogin" name='email_login' value='1'/>
+                        <br><small>Specify whether users can login via email address or username instead of just username.</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="newUserTitle" class="col-sm-4 control-label">Default New User Title</label>
+                    <div class="col-sm-8">
+                        <input type='text' id="newUserTitle" class="form-control" name='new_user_title'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="checkEmailActivation" class="col-sm-4 control-label">Email Activation</label>
+                    <div class="col-sm-8">
+                        <input type="checkbox" id ="checkEmailActivation" name='activation' value='1'/>
+                        <br><small>Specify whether email activation is required for newly registered accounts.</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputThreshold" class="col-sm-4 control-label">Account Activation Threshold</label>
+                    <div class="col-sm-8">
+                        <input type='text' id="inputThreshold" class="form-control" name='resend_activation_threshold'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputTimeoutToken" class="col-sm-4 control-label">Password Reset Token Timeout value (in hours Max: 27 Hours)</label>
+                    <div class="col-sm-8">
+                        <input type='text' id="inputTimeoutToken" class="form-control" name='token_timeout'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="selectLanguage" class="col-sm-4 control-label">Site Language</label>
+                    <div class="col-sm-8">
+                        <select id="selectLanguage" name='language'></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-4 col-sm-8">
+                        <button type="submit" class="btn btn-success submit" value='Update'>Update</button>
 						</div>
-                	</div>
-				</div>
-
-				<div class="span2" onTablet="span4" onDesktop="span2">
-                	<div class="circleStatsItemBox green">
-						<div class="header">Bandwidth</div>
-						<span class="percent">Prozent</span>
-						<div class="circleStat">
-                    		<input type="text" value="78" class="whiteCircle" />
-						</div>
-						<div class="footer">
-							<span class="count">
-								<span class="number">5000</span>
-								<span class="unit">GB</span>
-							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">5000</span>
-								<span class="unit">GB</span>
-							</span>	
-						</div>
-                	</div>
-				</div>
-
-
-				<div class="span2 noMargin" onTablet="span4" onDesktop="span2">
-                	<div class="circleStatsItemBox pink">
-						<div class="header">CPU Auslastung</div>
-						<span class="percent">Prozent</span>
-                    	<div class="circleStat">
-                    		<input type="text" value="83" class="whiteCircle" />
-						</div>
-						<div class="footer">
-							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GHz</span>
-							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">3.2</span>
-								<span class="unit">GHz</span>
-							</span>	
-						</div>
-                	</div>
-				</div>
-
-				<div class="span2" onTablet="span4" onDesktop="span2">
-                	<div class="circleStatsItemBox greenLight">
-						<div class="header">Arbeitsspeicher</div>
-						<span class="percent">Prozent</span>
-                    	<div class="circleStat">
-                    		<input type="text" value="100" class="whiteCircle" />
-						</div>
-						<div class="footer">
-							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>	
-						</div>
-                	</div>
-				</div>
-						
-			</div>		
-						
-			<div class="row-fluid">
-				
-				<div class="widget yellow span4 noMargin" onTablet="span12" onDesktop="span4">
-					<h2><span class="glyphicons fire"><i></i></span> Server Auslastung</h2>
-					<hr>
-					<div class="content">
-						 <div id="serverLoad2" style="height:224px;"></div>
 					</div>
-				</div>
-			
+				</form>
 			</div>
-			
-			<div class="row-fluid">
-				
-				
-			
-				</div><!--/span-->
-				
-				<div class="box black span4" onTablet="span6" onDesktop="span4">
-					<div class="box-header">
-						<h2><i class="halflings-icon white user"></i><span class="break"></span>Last Users</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<ul class="dashboard-list metro">
-							<li class="green">
-								<a href="#">
-									<img class="avatar" alt="Dennis Ji" src="img/avatar.jpg">
-								</a>
-								<strong>Name:</strong> Dennis Ji<br>
-								<strong>Since:</strong> Jul 25, 2012 11:09<br>
-								<strong>Status:</strong> Approved             
-							</li>
-							
-						</ul>
-					</div>
-				</div><!--/span-->
-				
-				<div class="box black span4 noMargin" onTablet="span12" onDesktop="span4">
-					<div class="box-header">
-						<h2><i class="halflings-icon white check"></i><span class="break"></span>To Do List</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<div class="todo metro">
-							<ul class="todo-list">
-								<li class="red">
-									<a class="action icon-check-empty" href="#"></a>	
-									Windows Phone 8 App 
-									<strong>today</strong>
-								</li>
-								
-							</ul>
-						</div>	
-					</div>
-				</div>
-			
-			</div>
-			
+		</div>
+	</div>
+</div>
+	-->		
 			<div class="row-fluid">	
 
 				
