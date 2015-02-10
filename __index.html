@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="#DESCRIPTION#">
+  <meta name="author" content="#AUTHOR#">
+  <link rel="shortcut icon" href="css/favicon.ico">
+
+  <title>Server Panel</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="css/favicon.ico" />
+  
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/jumbotron-narrow.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap-switch.min.css" type="text/css" />
+   
+  <!-- JavaScript -->
+  <script src="http://localhost/kp/js/jquery-1.10.2.min.js"></script>
+  <script src="http://localhost/kp/js/bootstrap.js"></script>
+  <script src="http://localhost/kp/js/userfrosting.js"></script>
+  <script src="http://localhost/kp/js/date.min.js"></script>
+  <script src="http://localhost/kp/js/handlebars-v1.2.0.js"></script> 
+
+</head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills navbar pull-right">
+        </ul>
+        <h3 class="text-muted">Server Panel</h3>
+      </div>
+      <div class="jumbotron">
+        <h2>Welcome to Server Panel!</h2>
+        <p class="lead">Server Panel</p>
+		<div class="row">
+			<div class="col-sm-12">
+			  <a href="login.php" class="btn btn-success" role="button" value='Login'>Login</a>
+			</div>
+			<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="" alt="">
+      <div class="caption">
+        <h3>News</h3>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      
+      </div>
+    </div>
+  </div>
+        </div>
+		
+		
+        <div class="jumbotron-links">
+        </div>
+      </div>	
+      <div class="footer">
+  <p>&copy; <a href='#'>RBK</a>, 2014</p>
+</div>
+    </div> <!-- /container -->
+
+  </body>
+</html>
+
+<script>
+	$(document).ready(function() {
+		alertWidget('display-alerts');
+        // Load navigation bar
+        $(".navbar").load("header-loggedout.php", function() {
+            $(".navbar .navitem-home").addClass('active');
+        });
+        // Load jumbotron links
+        $(".jumbotron-links").load("jumbotron_links.php");     
+	});
+</script>

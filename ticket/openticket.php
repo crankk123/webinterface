@@ -1,3 +1,28 @@
+<?php
+if (isset($_POST['betreff']) AND isset($_POST['email']) AND isset($_POST['priorität']) AND isset($_POST['kategorie']) AND isset($_POST['text'])) {
+        $Betreff = $_POST['betreff'];
+        $Email = $_POST['email'];
+        $Priorität = $_POST['priorität'];
+        $Kategorie = $_POST['kategorie'];
+		$Text = $_POST['text'];
+
+
+
+//connect to db
+                $connect = mysql_connect("127.0.0.1", "root", "alka");
+                mysql_select_db("webinterface");
+                $sql = mysql_query("SELECT * FROM ticket");
+                $row = mysql_fetch_row($sql);
+
+
+
+
+echo"Eingetragen";}
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -321,20 +346,31 @@
 		<div class="page-header">
 			<h1>Welcome to Support Desk</h1>
 		</div>
-
 		<div class="body">
-		
-		
-
 		<p>Welcome to our Support Desk. Our Support Desk will help you to contact us for all your questions and get instant answers to it.</p> 	
 		<p>In order to open a support ticket, please select a department below.</p>
-		
-		<div class="badge badge-info">Select Department</div><p></p>
-		<select class="select2" id="dept">
-					
-					<option value="1">test </option>  
-		    	</select>
-    	<a href="new_ticket.php" id="select" class="btn btn-primary">Select</a>
+		<fieldset>
+		<legend>Neues Ticket</legend>
+		<form action="#" method="post">
+		Betreff:<br /><input type="text" name="betreff" /><br /><br />
+		Email:<br /><input type="text" name="email" /><br /><br />
+		Priorität:<br /><input type="text" name="priorität" /><br /><br />
+		Kategorie:<br><br>
+		<select name="kategorie" form="katform">
+				  <option value="srvp">Server Problem</option>
+				  <option value="buchaltung">Buchhaltung</option>
+				  <option value="techp">Technisches Problem</option>
+				  <option value="#">#</option>
+		</select><br><br>
+		Anliegen:<br><br>
+		<textarea name="text" cols="50" rows="5">
+	
+	</textarea><br>
+
+<button type="submit" onclick="javascript:openNewWin()" class="btn btn-default">Erstellen<a href="create_ticket.php"></a></button> 
+</form>
+</fieldset>
+ 
 		</div>
 
 	</div>
