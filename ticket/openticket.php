@@ -6,21 +6,33 @@
 	<meta charset="utf-8">
 	<title>Admin Panel</title>
 	<meta name="description" content="Bootstrap Metro Dashboard">
-	<meta name="author" content="RBK">
+	<meta name="author" content="Dennis Ji">
 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 	<!-- end: Meta -->
 	
-
 	<!-- start: Mobile Specific -->
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- end: Mobile Specific -->
+	<!-- Ticket CSS-->
+	<link rel="stylesheet" href="../css/ticket/font-awesome.css">
+    <link rel="stylesheet" href="../css/ticket/select2.css">
+	<link href="../css/ticket/custom.css" rel="stylesheet">
+	<!-- Ticket JS-->
+		<script src="../js/ticket/jquery-1.8.3.min.js"></script>
+        <script src="../js/ticket/bootstrap.js"></script>
+        <script src="../js/ticket/select2.js"></script> 
+        <script src="../js/ticket/jquery-bootalert.js"></script>
+        <script src="../js/ticket/custom.js"></script>
+        <!-- Tablesorter: required for bootstrap -->
+        <link rel="stylesheet" href="../css/ticket/theme.bootstrap.css">
+        <script src="../js/ticket/jquery.tablesorter.js"></script>
+        <script src="../js/ticket/jquery.tablesorter.widgets.js"></script>
 	
 	<!-- start: CSS -->
-	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link id="base-style" href="css/style.css" rel="stylesheet">
-	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="../css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- end: CSS -->
 	
@@ -54,7 +66,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"><span>Admin Panel</span></a>
+				<a class="brand" href="/index.html"><span>Admin Panel</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -71,13 +83,75 @@
                             	<li>
                                     <a href="#">
 										<span class="icon blue"><i class="icon-user"></i></span>
-										<span class="message">ToDo</span>
-										<span class="time">1 min ToDo</span> 
+										<span class="message">New user registration</span>
+										<span class="time">1 min</span> 
                                     </a>
                                 </li>
-								
+								<li>
+                                    <a href="#">
+										<span class="icon green"><i class="icon-comment-alt"></i></span>
+										<span class="message">New comment</span>
+										<span class="time">7 min</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="#">
+										<span class="icon green"><i class="icon-comment-alt"></i></span>
+										<span class="message">New comment</span>
+										<span class="time">8 min</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="#">
+										<span class="icon green"><i class="icon-comment-alt"></i></span>
+										<span class="message">New comment</span>
+										<span class="time">16 min</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="#">
+										<span class="icon blue"><i class="icon-user"></i></span>
+										<span class="message">New user registration</span>
+										<span class="time">36 min</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="#">
+										<span class="icon yellow"><i class="icon-shopping-cart"></i></span>
+										<span class="message">2 items sold</span>
+										<span class="time">1 hour</span> 
+                                    </a>
+                                </li>
+								<li class="warning">
+                                    <a href="#">
+										<span class="icon red"><i class="icon-user"></i></span>
+										<span class="message">User deleted account</span>
+										<span class="time">2 hour</span> 
+                                    </a>
+                                </li>
+								<li class="warning">
+                                    <a href="#">
+										<span class="icon red"><i class="icon-shopping-cart"></i></span>
+										<span class="message">New comment</span>
+										<span class="time">6 hour</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="#">
+										<span class="icon green"><i class="icon-comment-alt"></i></span>
+										<span class="message">New comment</span>
+										<span class="time">yesterday</span> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="#">
+										<span class="icon blue"><i class="icon-user"></i></span>
+										<span class="message">New user registration</span>
+										<span class="time">yesterday</span> 
+                                    </a>
+                                </li>
                                 <li class="dropdown-menu-sub-footer">
-                            		<a>View all notifications ToDo</a>
+                            		<a>View all notifications</a>
 								</li>	
 							</ul>
 						</li>
@@ -88,7 +162,7 @@
 							</a>
 							<ul class="dropdown-menu tasks">
 								<li class="dropdown-menu-title">
- 									<span>You have 17 tasks in progress ToDo</span>
+ 									<span>You have 17 tasks in progress</span>
 									<a href="#refresh"><i class="icon-repeat"></i></a>
 								</li>
 								<li>
@@ -100,7 +174,45 @@
                                         <div class="taskProgress progressSlim red">80</div> 
                                     </a>
                                 </li>
-                                
+                                <li>
+                                    <a href="#">
+										<span class="header">
+											<span class="title">Android Development</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim green">47</div> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+										<span class="header">
+											<span class="title">ARM Development</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim yellow">32</div> 
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="#">
+										<span class="header">
+											<span class="title">ARM Development</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim greenLight">63</div> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+										<span class="header">
+											<span class="title">ARM Development</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim orange">80</div> 
+                                    </a>
+                                </li>
+								<li>
+                            		<a class="dropdown-menu-sub-footer">View all tasks</a>
+								</li>	
 							</ul>
 						</li>
 						<!-- end: Notifications Dropdown -->
@@ -112,15 +224,15 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Admin ToDo
+								<i class="halflings-icon white user"></i> Dennis Ji
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-menu-title">
  									<span>Account Settings</span>
 								</li>
-								<li><a href="user.html"><i class="halflings-icon user"></i> Profile</a></li>
-								<li><a href="login.html"><i class="halflings-icon off"></i> Abmelden</a></li>
+								<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
+								<li><a href="login.php"><i class="halflings-icon off"></i> Logout</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
@@ -140,7 +252,7 @@
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="index.html"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
+						<li><a href="../index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
 
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
@@ -168,7 +280,7 @@
 								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Übersicht</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> #</span></a></li>
 							</ul>	
-						</li>						
+						</li>
 						
 					</ul>
 				</div>
@@ -189,185 +301,72 @@
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
-					<a href="index.html">Dashboard</a> 
+					<a href="index.html">Home</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Dashboard</a></li>
+				<li><a href="#">Ticket Eröffnen</a></li>
 			</ul>
 
 			<div class="row-fluid">
 				
+			<div class="page-header">
+  <h1>Ticket Eröffnen</h1>
+</div>
+				
+			</div>	
+
+			<div class="container">
+<div class="span12">
+	<div class="well-white">
+		<div class="page-header">
+			<h1>Welcome to Support Desk</h1>
+		</div>
+
+		<div class="body">
+		
+		
+
+		<p>Welcome to our Support Desk. Our Support Desk will help you to contact us for all your questions and get instant answers to it.</p> 	
+		<p>In order to open a support ticket, please select a department below.</p>
+		
+		<div class="badge badge-info">Select Department</div><p></p>
+		<select class="select2" id="dept">
+					
+					<option value="1">test </option>  
+		    	</select>
+    	<a href="new_ticket.php" id="select" class="btn btn-primary">Select</a>
+		</div>
+
+	</div>
+
+</div>
+<!--
+<script>
+	$(function(){
+		$("#select").click(function(){
+			deptid = $("#dept").val();
+			if(deptid)
+			{
+				window.location = 'new_ticket.php' + deptid ;
+			}
+			else
+			{
+				$.bootalert('Error', 'Please select a department');
+			}
+		})
+	})
+</script>
+-->
+
+</div>
+	
+	
 			
-				
-			</div>		
-
 			
-			<div class="row-fluid hideInIE8 circleStats">
-				
-				<div class="span2" onTablet="span4" onDesktop="span2">
-                	<div class="circleStatsItemBox yellow">
-						<div class="header">Festplatten Auslastung</div>
-						<span class="percent">Prozent</span>
-						<div class="circleStat">
-                    		<input type="text" value="58" class="whiteCircle" />
-						</div>		
-						<div class="footer">
-							<span class="count">
-								<span class="number">20000</span>
-								<span class="unit">MB</span>
-							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">50000</span>
-								<span class="unit">MB</span>
-							</span>	
-						</div>
-                	</div>
-				</div>
-
-				<div class="span2" onTablet="span4" onDesktop="span2">
-                	<div class="circleStatsItemBox green">
-						<div class="header">Bandwidth</div>
-						<span class="percent">Prozent</span>
-						<div class="circleStat">
-                    		<input type="text" value="78" class="whiteCircle" />
-						</div>
-						<div class="footer">
-							<span class="count">
-								<span class="number">5000</span>
-								<span class="unit">GB</span>
-							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">5000</span>
-								<span class="unit">GB</span>
-							</span>	
-						</div>
-                	</div>
-				</div>
-
-
-				<div class="span2 noMargin" onTablet="span4" onDesktop="span2">
-                	<div class="circleStatsItemBox pink">
-						<div class="header">CPU Auslastung</div>
-						<span class="percent">Prozent</span>
-                    	<div class="circleStat">
-                    		<input type="text" value="83" class="whiteCircle" />
-						</div>
-						<div class="footer">
-							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GHz</span>
-							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">3.2</span>
-								<span class="unit">GHz</span>
-							</span>	
-						</div>
-                	</div>
-				</div>
-
-				<div class="span2" onTablet="span4" onDesktop="span2">
-                	<div class="circleStatsItemBox greenLight">
-						<div class="header">Arbeitsspeicher</div>
-						<span class="percent">Prozent</span>
-                    	<div class="circleStat">
-                    		<input type="text" value="100" class="whiteCircle" />
-						</div>
-						<div class="footer">
-							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>	
-						</div>
-                	</div>
-				</div>
-						
-			</div>		
-						
-			<div class="row-fluid">
-				
-				<div class="widget yellow span4 noMargin" onTablet="span12" onDesktop="span4">
-					<h2><span class="glyphicons fire"><i></i></span> Server Auslastung</h2>
-					<hr>
-					<div class="content">
-						 <div id="serverLoad2" style="height:224px;"></div>
-					</div>
-				</div>
 			
 			</div>
 			
-			<div class="row-fluid">
-				
-				
 			
-				</div><!--/span-->
-				
-				<div class="box black span4" onTablet="span6" onDesktop="span4">
-					<div class="box-header">
-						<h2><i class="halflings-icon white user"></i><span class="break"></span>Last Users</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<ul class="dashboard-list metro">
-							<li class="green">
-								<a href="#">
-									<img class="avatar" alt="Dennis Ji" src="img/avatar.jpg">
-								</a>
-								<strong>Name:</strong> Dennis Ji<br>
-								<strong>Since:</strong> Jul 25, 2012 11:09<br>
-								<strong>Status:</strong> Approved             
-							</li>
-							
-						</ul>
-					</div>
-				</div><!--/span-->
-				
-				<div class="box black span4 noMargin" onTablet="span12" onDesktop="span4">
-					<div class="box-header">
-						<h2><i class="halflings-icon white check"></i><span class="break"></span>To Do List</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<div class="todo metro">
-							<ul class="todo-list">
-								<li class="red">
-									<a class="action icon-check-empty" href="#"></a>	
-									Windows Phone 8 App 
-									<strong>today</strong>
-								</li>
-								
-							</ul>
-						</div>	
-					</div>
-				</div>
-			
-			</div>
-			
-			<div class="row-fluid">	
-
-				
-				
-				<div class="clearfix"></div>
-								
-			</div><!--/row-->
-			
-       
-
-	</div><!--/.fluid-container-->
 	
 			<!-- end: Content -->
 		</div><!--/#content.span10-->
@@ -392,7 +391,7 @@
 	<footer>
 
 		<p>
-			<span style="text-align:left;float:left">&copy; 2013 <a href="#" alt="Bootstrap_Metro_Dashboard">RBK</a></span>
+			<span style="text-align:left;float:left">&copy; 2013 <a href="#" alt="Bootstrap_Metro_Dashboard">Niclas</a></span>
 			
 		</p>
 
